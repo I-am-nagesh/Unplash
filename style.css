@@ -1,54 +1,109 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  position: fixed;
+}
+
+form {
+  padding-left: 100px;
+}
+form input {
+  font-size: large;
+  text-align: left;
+  padding: 10px;
+  padding-right: 200px;
+  border-radius: 10px;
+  border-color: blueviolet;
+}
+.explore {
+  padding-left: 16px;
+  font-size: x-large;
+  justify-content: space-around;
+}
+.explore a {
+  padding: 10px;
+  text-decoration: none;
+  color: gray;
+}
+.action {
+  padding-left: 100px;
+  font-size: x-large;
+  justify-content: space-around;
+}
+.action a {
+  padding: 10px;
+  text-decoration: none;
+}
+.action a button {
+  color: gray;
+  border: blueviolet;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.button:hover {
+  transition: 0.2s;
+  color: black;
+  background-color: gray;
+}
 .main {
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0px 60px 0px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px 60px 0px;
 }
 
 h1 {
-    margin: 10px 0px 30px 0px;
-    font-family: cursive;
-    color: rgb(0, 6, 90);
-    font-size: 50px;
+  margin: 10px 0px 30px 0px;
+  padding: 20px;
+  font-family: cursive;
+  color: rgb(0, 6, 90);
+  font-size: 50px;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border: 3px black;
+}
+
+@media (max-width: 800px) {
   .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+    flex: 50%;
+    max-width: 50%;
   }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-    border: 3px black;
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
-  
-  @media (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+}
